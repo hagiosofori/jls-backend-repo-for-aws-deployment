@@ -11,9 +11,9 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
-app.use('/', (req, res) => { res.status(200).json({ message: "Welcome to Alvin's API for the JLS assessment" }); });
 app.use('/products', productRoutes);
 app.use('/product-locations', productLocationRoutes);
+app.use('/', (req, res) => { res.status(200).json({ message: "Welcome to Alvin's API for the JLS assessment" }); });
 
 app.listen(process.env.PORT, async () => {
   await db.sync({ alter: true, });
