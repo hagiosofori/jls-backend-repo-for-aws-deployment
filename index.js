@@ -14,7 +14,7 @@ app.use(cors())
 app.use('/products', productRoutes)
 app.use('/product-locations', productLocationRoutes);
 
-app.listen(80, async () => {
+app.listen(5000, async () => {
   await db.sync({ alter: true, });
-  console.log('listening on port 80');
+  console.log('listening on port 5000');
 });
