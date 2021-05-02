@@ -14,7 +14,7 @@ app.use(cors())
 app.use('/products', productRoutes)
 app.use('/product-locations', productLocationRoutes);
 
-app.listen(8080, async () => {
+app.listen(process.env.PORT, async () => {
   await db.sync({ alter: true, });
   console.log('listening on port 8080');
 });
