@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "seed:db": "node ./db/seedDBFromCSV.js"
+    "seed:db": "node ./db/seedDBFromCSV.js",
+    "start": "pm2 start index.js"
   },
   "dependencies": {
     "@fast-csv/parse": "^4.3.6",
